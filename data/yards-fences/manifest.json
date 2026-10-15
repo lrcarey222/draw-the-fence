@@ -1,0 +1,67 @@
+{
+  "schema": "osi-yards-fences",
+  "schema_version": 1,
+  "bundle_id": "ceef7f64564f87f735786fabd8018eb4",
+  "created": "2026-10-15T14:26:51Z",
+  "git_commit": "ce07dc9",
+  "generator": "scripts/89_export_yards_fences_data.R",
+  "inputs": {
+    "sector_bundle_id": "2e8195f9607df23fa44f3fffc78c2608",
+    "sector_created": "2026-10-14T20:51:39Z",
+    "strategic_bundle_id": "89d9af9a5fe8ef79f179cff95c5ba2a9",
+    "strategic_created": "2026-10-14T20:41:10Z",
+    "network_build": "2026-10-12",
+    "pipeline_marker": "pipeline 04-25 finished 2026-10-12 09:09:32 (final: EIA fill, baskets, CM-FDI)"
+  },
+  "countries": [
+    {
+      "iso3": "USA",
+      "name": "United States",
+      "file": "evidence-USA.96dbb519.json"
+    }
+  ],
+  "reference": "reference.75568bc3.json",
+  "validation": [
+    {
+      "check": "sector bundle excludes restricted (BNEF/BCG) data",
+      "ok": true,
+      "detail": "include_restricted = FALSE"
+    },
+    {
+      "check": "strategic bundle is the one the sector bundle was built next to",
+      "ok": true,
+      "detail": "89d9af9a5fe8ef79f179cff95c5ba2a9 vs 89d9af9a5fe8ef79f179cff95c5ba2a9"
+    },
+    {
+      "check": "every component evidence scope has records",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every stack layer is a curated component",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every raw record carries a source and a year",
+      "ok": true,
+      "detail": "0 records"
+    },
+    {
+      "check": "no normalised OSI component feeds the engine",
+      "ok": true,
+      "detail": "0 records"
+    },
+    {
+      "check": "no headline index is used as evidence",
+      "ok": true,
+      "detail": "0 records"
+    }
+  ],
+  "notes": [
+    "OSI metrics describe observed economic, technological and supply-chain conditions. They do not themselves determine yard placement.",
+    "Evidence is measured at the technology-stage, HS6 sub-component or mineral level; no measure here is component-level unless its label says so.",
+    "Shares are of world supply on the stated measure and year; EU members are counted individually.",
+    "Normalised OSI components are relative (ranks), never absolute quantities, and never feed the decision engine."
+  ]
+}
